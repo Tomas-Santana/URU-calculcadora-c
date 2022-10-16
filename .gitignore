@@ -1,0 +1,4 @@
+# config
+*.json
+# ejecutables
+*.exe
