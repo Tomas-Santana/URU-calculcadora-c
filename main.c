@@ -20,30 +20,30 @@ int main() {
         switch (flag)
         {
         case 1:
-            printf("%.4f\n", suma(num1, num2));
-            printf("Realizar otra operacion. [0] No, cerrar programa [1] Si: "); scanf("%d", &flag);
+            printf("%.4f+%.4f=%.4f\n",num1,num2, suma(num1, num2));
             break;
 
         case 2:
-            printf("%.4f\n", resta(num1, num2));
-            printf("Realizar otra operacion. [0] No, cerrar programa [1] Si: "); scanf("%d", &flag);
+            printf("%.4f-%.4f=%.4f\n",num1,num2, resta(num1, num2));
             break;
 
         case 3:
-            printf("%.4f\n", mult(num1, num2));
-            printf("Realizar otra operacion. [0] No, cerrar programa [1] Si: "); scanf("%d", &flag);
+            printf("%.4fx%.4f=%.4f\n",num1,num2, mult(num1, num2));
             break;
-        
         case 4:
-            printf("%.4f\n", div(num1, num2));
-            printf("Realizar otra operacion. [0] No, cerrar programa [1] Si: "); scanf("%d", &flag);
+            printf("%.4f/%.4f=%.4f\n",num1,num2, div(num1, num2));
             break;
         
         default:
             printf("Opcion invalida. Intente de nuevo\n");
-            flag = 1;
+            flag = 5;
             break;
         }
+        
+        if (flag!=5) { 
+            printf("Realizar otra operacion? [0] No [1] Si: "); scanf("%d", &flag);
+        }
+        else flag = 1;
     } while (flag);
     
     return 0;
