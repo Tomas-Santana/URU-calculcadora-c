@@ -5,17 +5,22 @@ float resta(float, float);
 float mult(float, float);
 float div(float, float);
 
-unsigned short int flag;
+short int flag;
 float num1, num2;
 
 int main() {
     printf("Este programa le permitira operar dos numeros.\n");
     do
     {
+        while (1) {
+            printf("1. Suma.\n2. Resta.\n3. Multiplicacion.\n4. Division.\nIngrese una opcion: ");
+            scanf("%d",&flag);
+            if(flag>4 || flag<1) printf("Opcion invalida.\n\n");
+            else break;
+        }
+        
         printf("Ingrese el primer numero: "); scanf("%f", &num1);
         printf("Ingrese el segundo numero: "); scanf("%f", &num2);
-        printf("1. Suma.\n2. Resta.\n3. Multiplicacion.\n4. Division.\nIngrese una opcion:");
-        scanf("%d",&flag);
 
         switch (flag)
         {
@@ -35,8 +40,6 @@ int main() {
             break;
         
         default:
-            printf("Opcion invalida. Intente de nuevo\n");
-            flag = 5;
             break;
         }
         
