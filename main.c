@@ -42,11 +42,7 @@ int main() {
         default:
             break;
         }
-        
-        if (flag!=5) { 
-            printf("Realizar otra operacion? [0] No [1] Si: "); scanf("%d", &flag);
-        }
-        else flag = 1;
+        printf("Realizar otra operacion? [0] No [1] Si: "); scanf("%d", &flag);
     } while (flag);
     
     return 0;
